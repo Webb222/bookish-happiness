@@ -4,8 +4,8 @@ import { Link } from 'wouter';
 
 export function Footer() {
   return (
-    <footer id="contact" className="bg-foreground text-background pt-20 pb-10 px-6 border-t-4 border-primary">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+    <footer id="contact" className="bg-foreground text-background pt-12 sm:pt-20 pb-8 sm:pb-10 px-4 sm:px-6 border-t-4 border-primary">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 mb-10 sm:mb-16">
         
         <div className="lg:col-span-1">
           <Link href="/" className="flex items-center gap-2 mb-6">

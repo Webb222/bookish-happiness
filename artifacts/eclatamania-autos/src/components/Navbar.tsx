@@ -22,12 +22,12 @@ export function Navbar() {
           : 'bg-transparent py-6'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 text-primary group">
-          <div className="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform">
-            <Car className="w-6 h-6" />
+          <div className="w-9 h-9 sm:w-10 sm:h-10 bg-primary text-white rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform shrink-0">
+            <Car className="w-5 h-5 sm:w-6 sm:h-6" />
           </div>
-          <span className="font-bold text-2xl tracking-tight text-foreground">
+          <span className="font-bold text-lg sm:text-2xl tracking-tight text-foreground">
             Eclatamania <span className="text-primary">Autos</span>
           </span>
         </Link>

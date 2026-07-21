@@ -89,16 +89,16 @@ export function Inventory() {
   };
 
   return (
-    <section id="inventory" className="py-24 px-6 bg-muted/30">
+    <section id="inventory" className="py-16 sm:py-24 px-4 sm:px-6 bg-muted/30">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 sm:mb-12 gap-4 sm:gap-6">
           <div>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4 tracking-tight">Available Vehicles</h2>
-            <p className="text-foreground/70 text-lg max-w-2xl">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-foreground mb-3 sm:mb-4 tracking-tight">Available Vehicles</h2>
+            <p className="text-foreground/70 text-base sm:text-lg max-w-2xl">
               From pristine Tokunbo imports to verified Nigerian used options. Browse our carefully curated fleet.
             </p>
           </div>
-          <div className="relative">
+          <div className="relative w-full md:w-auto">
             <Search className="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-foreground/40" />
             <input 
               type="text" 
@@ -108,7 +108,7 @@ export function Inventory() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {CARS.map((car, i) => (
             <motion.div 
               key={car.id}
