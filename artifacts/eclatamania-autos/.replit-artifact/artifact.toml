@@ -1,0 +1,27 @@
+kind = "web"
+previewPath = "/"
+title = "Eclatamania Autos"
+version = "1.0.0"
+id = "artifacts/eclatamania-autos"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21782
+
+[services.development]
+run = "pnpm --filter @workspace/eclatamania-autos run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/eclatamania-autos", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/eclatamania-autos/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21782"
+BASE_PATH = "/"
