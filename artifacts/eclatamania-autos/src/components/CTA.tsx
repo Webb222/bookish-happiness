@@ -19,7 +19,7 @@ export function CTA() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="https://wa.me/2348001234567" 
+                href="https://wa.me/2347060747265" 
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-[#20bd5a] transition-colors shadow-lg"
@@ -36,8 +36,8 @@ export function CTA() {
             </div>
             <h3 className="font-bold text-lg sm:text-xl mb-2">Visit Our Lot</h3>
             <p className="text-primary-foreground/80 text-sm">
-              Allen Avenue, Ikeja<br />
-              Lagos, Nigeria
+              Ekiti State, Nigeria<br />
+              Nationwide Delivery Available
             </p>
             <div className="mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-white/20 text-sm">
               <p className="font-semibold">Open Mon-Sat: 8am - 6pm</p>

@@ -42,13 +42,13 @@ export function Navbar() {
 
         <div className="hidden md:flex items-center gap-4">
           <a 
-            href="https://wa.me/2348001234567" 
+            href="https://wa.me/2347060747265" 
             target="_blank" 
             rel="noreferrer"
             className="flex items-center gap-2 bg-primary text-white px-5 py-2.5 rounded-lg font-bold hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20"
           >
             <Phone className="w-4 h-4" />
-            <span>+234 800 123 4567</span>
+            <span>+234 706 074 7265</span>
           </a>
         </div>
 
@@ -69,7 +69,7 @@ export function Navbar() {
           <a href="#about" onClick={() => setMobileMenuOpen(false)} className="font-semibold py-2">About Us</a>
           <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="font-semibold py-2">Contact</a>
           <a 
-            href="https://wa.me/2348001234567" 
+            href="https://wa.me/2347060747265" 
             className="flex items-center justify-center gap-2 bg-primary text-white px-5 py-3 rounded-lg font-bold mt-2"
           >
             <Phone className="w-4 h-4" />

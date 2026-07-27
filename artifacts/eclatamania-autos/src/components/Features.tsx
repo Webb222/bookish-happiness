@@ -17,12 +17,12 @@ export function Features() {
     {
       icon: <Banknote className="w-8 h-8" />,
       title: "Fair & Transparent Pricing",
-      desc: "We offer the most competitive prices in Lagos. What you see is what you pay—no hidden agency fees."
+      desc: "We offer the most competitive prices in Nigeria. What you see is what you pay—no hidden agency fees."
     },
     {
       icon: <Car className="w-8 h-8" />,
       title: "Test Drive Available",
-      desc: "Visit our Ikeja showroom to inspect your dream car physically and take it for a spin before making a decision."
+      desc: "Visit our Ekiti State showroom to inspect your dream car physically and take it for a spin before making a decision."
     }
   ];
 

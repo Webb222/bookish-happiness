@@ -17,7 +17,7 @@ export function Footer() {
             </span>
           </Link>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            Lagos' most trusted dealer for Brand New, Tokunbo, and Nigerian Used vehicles. Your satisfaction is our priority.
+            Your trusted dealer for Brand New, Tokunbo, and Nigerian Used vehicles. Based in Ekiti State — delivering nationwide.
           </p>
           <div className="flex gap-4">
             <a href="#" className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors text-white">
@@ -44,15 +44,15 @@ export function Footer() {
           <ul className="space-y-4 text-muted-foreground">
             <li className="flex items-start gap-3">
               <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-              <span>45 Allen Avenue, Ikeja<br />Lagos, Nigeria</span>
+              <span>Ekiti State, Nigeria<br /><span className="text-primary font-semibold">Nationwide Delivery Available</span></span>
             </li>
             <li className="flex items-center gap-3">
               <Phone className="w-5 h-5 text-primary shrink-0" />
-              <span>+234 800 123 4567</span>
+              <a href="https://wa.me/2347060747265" className="hover:text-primary transition-colors">+234 706 074 7265</a>
             </li>
             <li className="flex items-center gap-3">
               <Mail className="w-5 h-5 text-primary shrink-0" />
-              <span>sales@eclatamania.com.ng</span>
+              <span>eclatamania@gmail.com</span>
             </li>
           </ul>
         </div>

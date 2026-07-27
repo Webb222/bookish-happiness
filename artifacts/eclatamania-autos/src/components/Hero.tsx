@@ -10,7 +10,7 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <img 
           src={heroBg} 
-          alt="Premium Car Showroom in Lagos" 
+          alt="Premium Car Showroom" 
           className="w-full h-full object-cover"
           onError={(e) => {
             e.currentTarget.style.display = 'none';
@@ -28,7 +28,7 @@ export function Hero() {
           >
             <div className="inline-flex items-center gap-2 bg-white text-primary px-3 py-1.5 sm:px-4 sm:py-2 rounded-full font-bold text-xs sm:text-sm mb-5 sm:mb-6 border border-border shadow-sm">
               <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-primary" />
-              <span>#1 Trusted Dealership in Lagos</span>
+              <span>Trusted Dealership — Nationwide Delivery</span>
             </div>
             
             <h1 className="text-3xl sm:text-5xl md:text-7xl font-extrabold text-foreground leading-[1.1] tracking-tight mb-4 sm:mb-6">

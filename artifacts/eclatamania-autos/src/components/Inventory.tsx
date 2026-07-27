@@ -149,7 +149,7 @@ export function Inventory() {
                     {car.price}
                   </div>
                   <a 
-                    href={`https://wa.me/2348001234567?text=Hi Eclatamania Autos, I am interested in the ${car.name} listed for ${car.price}.`}
+                    href={`https://wa.me/2347060747265?text=Hi Eclatamania Autos, I am interested in the ${car.name} listed for ${car.price}.`}
                     target="_blank"
                     rel="noreferrer"
                     className="block w-full text-center bg-foreground text-white py-3 rounded-lg font-bold hover:bg-primary transition-colors"
