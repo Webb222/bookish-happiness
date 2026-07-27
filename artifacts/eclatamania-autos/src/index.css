@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Syne:wght@400..800&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @plugin "@tailwindcss/typography";
@@ -41,6 +41,7 @@
   --color-destructive-border: var(--destructive-border);
 
   --font-sans: var(--app-font-sans);
+  --font-heading: var(--app-font-heading);
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -56,64 +57,65 @@
   --elevate-1: rgba(0, 0, 0, 0.03);
   --elevate-2: rgba(0, 0, 0, 0.08);
 
-  /* Very light grey for background */
-  --background: 210 40% 98%;
+  /* Warm cream for background: #FFFBF0 */
+  --background: 44 100% 97%;
   
-  /* Very dark slate for text */
-  --foreground: 222 47% 11%;
+  /* Deep forest green for text where needed, but mostly very dark green: #0a240c */
+  --foreground: 125 57% 9%;
 
-  /* Soft border */
-  --border: 214 32% 91%;
+  /* Soft border with amber tint */
+  --border: 38 40% 85%;
 
-  /* White for cards */
-  --card: 0 0% 100%;
-  --card-foreground: 222 47% 11%;
-  --card-border: 214 32% 91%;
+  /* Cream for cards */
+  --card: 44 100% 97%;
+  --card-foreground: 125 57% 9%;
+  --card-border: 38 40% 85%;
 
-  --popover: 0 0% 100%;
-  --popover-foreground: 222 47% 11%;
-  --popover-border: 214 32% 91%;
+  --popover: 44 100% 97%;
+  --popover-foreground: 125 57% 9%;
+  --popover-border: 38 40% 85%;
 
-  /* Deep Emerald Green (Nigerian Premium) */
-  --primary: 152 76% 16%;
-  --primary-foreground: 0 0% 100%;
+  /* Deep Forest Green (Primary) #1B5E20 */
+  --primary: 125 55% 24%;
+  --primary-foreground: 44 100% 97%;
 
-  /* Soft Light Green */
-  --secondary: 152 40% 90%;
-  --secondary-foreground: 152 76% 16%;
+  /* Light amber tints for secondary */
+  --secondary: 38 92% 90%;
+  --secondary-foreground: 125 55% 24%;
 
-  /* Light gray muted */
-  --muted: 210 40% 96%;
-  --muted-foreground: 215 16% 47%;
+  /* Cream darker muted */
+  --muted: 44 40% 90%;
+  --muted-foreground: 125 20% 40%;
 
-  /* Golden/Amber Accent for badges (e.g., Tokunbo) */
+  /* Rich Gold/Amber Accent #F59E0B */
   --accent: 38 92% 50%;
-  --accent-foreground: 0 0% 100%;
+  --accent-foreground: 125 57% 9%;
 
   --destructive: 0 84% 60%;
-  --destructive-foreground: 0 0% 100%;
+  --destructive-foreground: 44 100% 97%;
 
-  --input: 214 32% 91%;
-  --ring: 152 76% 16%;
+  --input: 38 40% 85%;
+  --ring: 38 92% 50%;
 
-  --app-font-sans: 'Plus Jakarta Sans', sans-serif;
+  --app-font-sans: 'DM Sans', sans-serif;
+  --app-font-heading: 'Syne', sans-serif;
   
   --radius: 0.75rem;
   
-  --shadow-2xs: 0px 2px 0px 0px hsl(222 47% 11% / 0.02);
-  --shadow-xs: 0px 2px 0px 0px hsl(222 47% 11% / 0.03);
+  --shadow-2xs: 0px 2px 0px 0px hsl(125 57% 9% / 0.02);
+  --shadow-xs: 0px 2px 0px 0px hsl(125 57% 9% / 0.03);
   --shadow-sm:
-    0px 2px 0px 0px hsl(222 47% 11% / 0.02),
-    0px 1px 2px -1px hsl(222 47% 11% / 0.03);
+    0px 2px 0px 0px hsl(125 57% 9% / 0.02),
+    0px 1px 2px -1px hsl(125 57% 9% / 0.03);
   --shadow:
-    0px 2px 0px 0px hsl(222 47% 11% / 0.02),
-    0px 1px 2px -1px hsl(222 47% 11% / 0.04);
+    0px 2px 0px 0px hsl(125 57% 9% / 0.02),
+    0px 1px 2px -1px hsl(125 57% 9% / 0.04);
   --shadow-md:
-    0px 2px 0px 0px hsl(222 47% 11% / 0.02),
-    0px 2px 4px -1px hsl(222 47% 11% / 0.04);
+    0px 2px 0px 0px hsl(125 57% 9% / 0.02),
+    0px 2px 4px -1px hsl(125 57% 9% / 0.04);
   --shadow-lg:
-    0px 2px 0px 0px hsl(222 47% 11% / 0.02),
-    0px 4px 6px -1px hsl(222 47% 11% / 0.04);
+    0px 2px 0px 0px hsl(125 57% 9% / 0.02),
+    0px 4px 6px -1px hsl(125 57% 9% / 0.04);
 
   --primary-border: hsl(from hsl(var(--primary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
   --secondary-border: hsl(from hsl(var(--secondary)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
@@ -122,29 +124,29 @@
   --destructive-border: hsl(from hsl(var(--destructive)) h s calc(l + var(--opaque-button-border-intensity)) / alpha);
 }
 
-/* Force light mode variables onto dark class since we want a controlled light premium look */
 .dark {
-  --background: 210 40% 98%;
-  --foreground: 222 47% 11%;
-  --border: 214 32% 91%;
-  --card: 0 0% 100%;
-  --card-foreground: 222 47% 11%;
-  --card-border: 214 32% 91%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 222 47% 11%;
-  --popover-border: 214 32% 91%;
-  --primary: 152 76% 16%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 152 40% 90%;
-  --secondary-foreground: 152 76% 16%;
-  --muted: 210 40% 96%;
-  --muted-foreground: 215 16% 47%;
+  /* Same as light, forcing the light mode style */
+  --background: 44 100% 97%;
+  --foreground: 125 57% 9%;
+  --border: 38 40% 85%;
+  --card: 44 100% 97%;
+  --card-foreground: 125 57% 9%;
+  --card-border: 38 40% 85%;
+  --popover: 44 100% 97%;
+  --popover-foreground: 125 57% 9%;
+  --popover-border: 38 40% 85%;
+  --primary: 125 55% 24%;
+  --primary-foreground: 44 100% 97%;
+  --secondary: 38 92% 90%;
+  --secondary-foreground: 125 55% 24%;
+  --muted: 44 40% 90%;
+  --muted-foreground: 125 20% 40%;
   --accent: 38 92% 50%;
-  --accent-foreground: 0 0% 100%;
+  --accent-foreground: 125 57% 9%;
   --destructive: 0 84% 60%;
-  --destructive-foreground: 0 0% 100%;
-  --input: 214 32% 91%;
-  --ring: 152 76% 16%;
+  --destructive-foreground: 44 100% 97%;
+  --input: 38 40% 85%;
+  --ring: 38 92% 50%;
 }
 
 @layer base {
@@ -157,10 +159,31 @@
   body {
     @apply font-sans antialiased bg-background text-foreground;
   }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
 }
 
 .text-balance {
   text-wrap: balance;
+}
+
+/* Background patterns */
+.nigerian-pattern {
+  background-image: radial-gradient(hsl(var(--accent)) 2px, transparent 2px), radial-gradient(hsl(var(--primary) / 0.2) 2px, transparent 2px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+  opacity: 0.1;
+}
+
+.pulse-animation {
+  animation: pulse-border 2s infinite;
+}
+
+@keyframes pulse-border {
+  0% { box-shadow: 0 0 0 0 hsl(var(--accent) / 0.7); }
+  70% { box-shadow: 0 0 0 15px hsl(var(--accent) / 0); }
+  100% { box-shadow: 0 0 0 0 hsl(var(--accent) / 0); }
 }
 
 @layer utilities {

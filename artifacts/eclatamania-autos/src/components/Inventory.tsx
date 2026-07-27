@@ -1,15 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Car, MapPin, CheckCircle, Search } from 'lucide-react';
+import { Car, MapPin, CheckCircle, Search, Tag } from 'lucide-react';
 
-import carLexus from '@assets/generated_images/car-lexus-rx.jpg';
-import carCamry from '@assets/generated_images/car-camry.jpg';
-import carGle from '@assets/generated_images/car-gle.jpg';
-import carAccord from '@assets/generated_images/car-accord.jpg';
-import carHighlander from '@assets/generated_images/car-highlander.jpg';
-import carRangeRover from '@assets/generated_images/car-rangerover.jpg';
-import carCorolla from '@assets/generated_images/car-corolla.jpg';
-import carLandCruiser from '@assets/generated_images/car-landcruiser.jpg';
+import carLexus from '@assets/cars/car-lexus.jpg';
+import carCamry from '@assets/cars/car-camry.jpg';
+import carGle from '@assets/cars/car-gle.jpg';
+import carAccord from '@assets/cars/car-accord.jpg';
+import carHighlander from '@assets/cars/car-highlander.jpg';
+import carRangeRover from '@assets/cars/car-rangerover.jpg';
+import carCorolla from '@assets/cars/car-corolla.jpg';
+import carLandCruiser from '@assets/cars/car-landcruiser.jpg';
 
 const CARS = [
   {
@@ -79,36 +79,37 @@ const CARS = [
 ];
 
 export function Inventory() {
-  const getConditionColor = (condition: string) => {
+  const getConditionStyle = (condition: string) => {
     switch (condition) {
-      case 'Brand New': return 'bg-primary text-white';
-      case 'Tokunbo': return 'bg-accent text-accent-foreground';
-      case 'Nigerian Used': return 'bg-muted-foreground text-white';
-      default: return 'bg-secondary text-secondary-foreground';
+      case 'Brand New': return 'bg-primary text-primary-foreground border-primary';
+      case 'Tokunbo': return 'bg-accent text-accent-foreground border-accent';
+      case 'Nigerian Used': return 'bg-[#FDE68A] text-[#78350F] border-[#FCD34D]';
+      default: return 'bg-secondary text-secondary-foreground border-secondary';
     }
   };
 
   return (
-    <section id="inventory" className="py-16 sm:py-24 px-4 sm:px-6 bg-muted/30">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 sm:mb-12 gap-4 sm:gap-6">
+    <section id="inventory" className="py-16 sm:py-24 px-4 sm:px-6 bg-muted relative border-y border-accent/20">
+      <div className="absolute inset-0 nigerian-pattern mix-blend-multiply opacity-20" />
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 sm:mb-16 gap-6 sm:gap-8">
           <div>
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-foreground mb-3 sm:mb-4 tracking-tight">Available Vehicles</h2>
-            <p className="text-foreground/70 text-base sm:text-lg max-w-2xl">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-foreground mb-4 tracking-tight uppercase">Available Vehicles</h2>
+            <p className="text-foreground/80 text-lg sm:text-xl max-w-2xl font-medium">
               From pristine Tokunbo imports to verified Nigerian used options. Browse our carefully curated fleet.
             </p>
           </div>
-          <div className="relative w-full md:w-auto">
-            <Search className="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-foreground/40" />
+          <div className="relative w-full md:w-80">
+            <Search className="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-primary" />
             <input 
               type="text" 
               placeholder="Search make or model..." 
-              className="pl-10 pr-4 py-3 rounded-lg border border-border bg-white w-full md:w-64 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary"
+              className="pl-12 pr-4 py-4 rounded-xl border-2 border-accent/30 bg-background w-full focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all font-medium text-foreground placeholder:text-foreground/40 shadow-sm"
             />
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {CARS.map((car, i) => (
             <motion.div 
               key={car.id}
@@ -116,43 +117,48 @@ export function Inventory() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="bg-white rounded-2xl overflow-hidden border border-border shadow-sm hover:shadow-xl hover:border-primary/30 transition-all duration-300 group flex flex-col"
+              className="bg-background rounded-2xl overflow-hidden border-2 border-border shadow-md hover:shadow-2xl hover:border-accent/50 transition-all duration-300 group flex flex-col"
             >
               <div className="relative aspect-[4/3] overflow-hidden bg-muted">
                 <img 
                   src={car.image} 
                   alt={car.name} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
                   }}
                 />
-                <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${getConditionColor(car.condition)}`}>
+                <div className={`absolute top-4 right-4 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest border shadow-sm ${getConditionStyle(car.condition)}`}>
                   {car.condition}
                 </div>
               </div>
               
-              <div className="p-5 flex flex-col flex-grow">
-                <h3 className="text-lg font-bold text-foreground mb-3 leading-tight">{car.name}</h3>
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="text-xl font-bold text-foreground mb-4 leading-tight font-heading">{car.name}</h3>
                 
-                <div className="flex flex-col gap-2 text-sm text-foreground/60 mb-6">
-                  <span className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-primary" /> Verified Condition
+                <div className="flex flex-col gap-3 text-sm text-foreground/70 mb-8 font-medium">
+                  <span className="flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5 text-primary" /> Verified Condition
                   </span>
-                  <span className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4 text-primary" /> {car.miles}
+                  <span className="flex items-center gap-3">
+                    <MapPin className="w-5 h-5 text-primary" /> {car.miles}
                   </span>
                 </div>
                 
-                <div className="mt-auto pt-4 border-t border-border">
-                  <div className="text-2xl font-extrabold text-primary mb-3">
-                    {car.price}
+                <div className="mt-auto pt-5 border-t-2 border-muted">
+                  <div className="mb-4">
+                    <div className="text-3xl font-extrabold text-primary font-heading tracking-tight">
+                      {car.price}
+                    </div>
+                    <div className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-accent bg-accent/10 px-2 py-1 rounded mt-1">
+                      <Tag className="w-3 h-3" /> Ekiti Price
+                    </div>
                   </div>
                   <a 
                     href={`https://wa.me/2347060747265?text=Hi Eclatamania Autos, I am interested in the ${car.name} listed for ${car.price}.`}
                     target="_blank"
                     rel="noreferrer"
-                    className="block w-full text-center bg-foreground text-white py-3 rounded-lg font-bold hover:bg-primary transition-colors"
+                    className="block w-full text-center bg-foreground text-background py-3.5 rounded-xl font-bold hover:bg-primary transition-colors uppercase tracking-wide text-sm shadow-md"
                   >
                     Inquire on WhatsApp
                   </a>
@@ -162,8 +168,8 @@ export function Inventory() {
           ))}
         </div>
         
-        <div className="mt-12 text-center">
-          <button className="bg-white border-2 border-primary text-primary px-8 py-3 rounded-xl font-bold hover:bg-primary hover:text-white transition-colors">
+        <div className="mt-16 text-center">
+          <button className="bg-background border-2 border-primary text-primary px-10 py-4 rounded-xl font-bold hover:bg-primary hover:text-primary-foreground transition-all uppercase tracking-widest shadow-sm hover:shadow-lg font-heading">
             Load More Vehicles
           </button>
         </div>
