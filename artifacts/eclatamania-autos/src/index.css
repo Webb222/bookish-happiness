@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Syne:wght@400..800&display=swap');
+/* Fonts loaded via index.html for faster render */
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @plugin "@tailwindcss/typography";
@@ -97,8 +97,8 @@
   --input: 38 40% 85%;
   --ring: 38 92% 50%;
 
-  --app-font-sans: 'DM Sans', sans-serif;
-  --app-font-heading: 'Syne', sans-serif;
+  --app-font-sans: 'Inter', sans-serif;
+  --app-font-heading: 'Plus Jakarta Sans', sans-serif;
   
   --radius: 0.75rem;
   
