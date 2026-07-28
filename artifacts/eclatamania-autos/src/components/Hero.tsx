@@ -5,7 +5,7 @@ import heroBg from '@/assets/cars/hero-showroom.jpg';
 
 export function Hero() {
   return (
-    <section id="home" className="relative min-h-[95vh] flex items-center pt-28 pb-16 md:pt-40 md:pb-32 overflow-hidden bg-background">
+    <section id="home" className="relative flex items-start sm:items-center min-h-0 sm:min-h-[95vh] pt-24 pb-14 sm:pt-28 sm:pb-16 md:pt-40 md:pb-32 overflow-hidden bg-background">
       {/* Background with overlay */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -28,8 +28,8 @@ export function Hero() {
             transition={{ duration: 0.6 }}
           >
             <div className="inline-flex items-center gap-2 bg-accent/20 text-primary px-3 py-1.5 sm:px-4 sm:py-2 rounded-full font-bold text-xs sm:text-sm mb-5 sm:mb-6 border border-accent/40 shadow-sm uppercase tracking-wide">
-              <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
-              <span>Based in Ekiti State — We Deliver Nationwide</span>
+              <MapPin className="w-4 h-4 shrink-0 text-accent" />
+              <span className="leading-tight">Based in Ekiti State — We Deliver Nationwide</span>
             </div>
             
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-foreground leading-[1.1] tracking-tight mb-4 sm:mb-6 uppercase">

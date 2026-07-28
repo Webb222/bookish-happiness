@@ -27,28 +27,39 @@ export function Navbar() {
           <div className="w-10 h-10 sm:w-11 sm:h-11 bg-accent text-accent-foreground rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform shrink-0 shadow-md">
             <Car className="w-6 h-6 sm:w-7 sm:h-7" />
           </div>
-          <span className="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-foreground uppercase">
+          <span className="font-heading font-extrabold text-lg sm:text-xl md:text-2xl tracking-tight text-foreground uppercase whitespace-nowrap">
             Eclatamania <span className="text-primary">Autos</span>
           </span>
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-8 font-bold text-foreground/80 font-heading tracking-wide uppercase text-sm">
-          <a href="#home" className="hover:text-accent transition-colors">Home</a>
-          <a href="#inventory" className="hover:text-accent transition-colors">Cars</a>
-          <a href="#about" className="hover:text-accent transition-colors">About Us</a>
-          <a href="#contact" className="hover:text-accent transition-colors">Contact</a>
+        <div className="hidden md:flex items-center gap-4 lg:gap-8 font-bold text-foreground/80 font-heading tracking-wide uppercase text-sm">
+          <a href="#home" className="hover:text-accent transition-colors whitespace-nowrap">Home</a>
+          <a href="#inventory" className="hover:text-accent transition-colors whitespace-nowrap">Cars</a>
+          <a href="#about" className="hover:text-accent transition-colors whitespace-nowrap">About</a>
+          <a href="#contact" className="hover:text-accent transition-colors whitespace-nowrap">Contact</a>
         </div>
 
         <div className="hidden md:flex items-center gap-4">
+          {/* Icon-only on tablet */}
           <a 
             href="https://wa.me/2347060747265" 
             target="_blank" 
             rel="noreferrer"
-            className="flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-lg font-bold hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20 border border-primary-border"
+            className="lg:hidden flex items-center justify-center bg-primary text-primary-foreground w-10 h-10 rounded-lg hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20 border border-primary-border shrink-0"
+            aria-label="Call us"
           >
             <Phone className="w-4 h-4 text-accent" />
-            <span>+234 706 074 7265</span>
+          </a>
+          {/* Full button on desktop */}
+          <a 
+            href="https://wa.me/2347060747265" 
+            target="_blank" 
+            rel="noreferrer"
+            className="hidden lg:flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-lg font-bold hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20 border border-primary-border"
+          >
+            <Phone className="w-4 h-4 text-accent" />
+            <span className="whitespace-nowrap">+234 706 074 7265</span>
           </a>
         </div>
 
