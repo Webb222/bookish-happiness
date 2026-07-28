@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ShieldCheck, MapPin } from 'lucide-react';
-import heroBg from '@assets/generated_images/hero-showroom.jpg';
+import heroBg from '@/assets/cars/hero-showroom.jpg';
 
 export function Hero() {
   return (

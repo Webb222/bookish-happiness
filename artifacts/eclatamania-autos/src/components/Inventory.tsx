@@ -2,14 +2,14 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Car, MapPin, CheckCircle, Search, Tag } from 'lucide-react';
 
-import carLexus from '@assets/cars/car-lexus.jpg';
-import carCamry from '@assets/cars/car-camry.jpg';
-import carGle from '@assets/cars/car-gle.jpg';
-import carAccord from '@assets/cars/car-accord.jpg';
-import carHighlander from '@assets/cars/car-highlander.jpg';
-import carRangeRover from '@assets/cars/car-rangerover.jpg';
-import carCorolla from '@assets/cars/car-corolla.jpg';
-import carLandCruiser from '@assets/cars/car-landcruiser.jpg';
+import carLexus from '@/assets/cars/car-lexus.jpg';
+import carCamry from '@/assets/cars/car-camry.jpg';
+import carGle from '@/assets/cars/car-gle.jpg';
+import carAccord from '@/assets/cars/car-accord.jpg';
+import carHighlander from '@/assets/cars/car-highlander.jpg';
+import carRangeRover from '@/assets/cars/car-rangerover.jpg';
+import carCorolla from '@/assets/cars/car-corolla.jpg';
+import carLandCruiser from '@/assets/cars/car-landcruiser.jpg';
 
 const CARS = [
   {
