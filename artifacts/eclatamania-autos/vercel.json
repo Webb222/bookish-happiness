@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd ../.. && pnpm --filter @workspace/eclatamania-autos run build",
+  "outputDirectory": "dist/public",
+  "installCommand": "cd ../.. && pnpm install"
+}
