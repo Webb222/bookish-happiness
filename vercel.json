@@ -1,5 +1,4 @@
 {
-  "buildCommand": "pnpm --filter @workspace/eclatamania-autos run build",
-  "outputDirectory": "artifacts/eclatamania-autos/dist/public",
+  "buildCommand": "pnpm --filter @workspace/eclatamania-autos run build && mkdir -p .vercel/output/static && cp -r artifacts/eclatamania-autos/dist/public/. .vercel/output/static/ && printf '{\"version\":3}' > .vercel/output/config.json",
   "installCommand": "pnpm install"
 }
