@@ -1,5 +1,5 @@
 {
-  "buildCommand": "pnpm --filter @workspace/eclatamania-autos run build && pnpm --filter @workspace/api-server run build",
-  "installCommand": "pnpm install",
-  "outputDirectory": "artifacts/eclatamania-autos/dist"
+  "buildCommand": "pnpm --filter @workspace/eclatamania-autos run build",
+  "outputDirectory": "artifacts/eclatamania-autos/dist/public",
+  "installCommand": "pnpm install"
 }
